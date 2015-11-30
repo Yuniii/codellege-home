@@ -1,0 +1,75 @@
+@require 'vars.styl'
+@require 'sidebar.styl'
+@require 'navbar.styl'
+
+.main-logo
+	width 200px
+	margin 38px auto
+
+.main-body
+	flex 1
+
+.main-content
+	.search-form
+		margin 40px auto
+		width searchbar-width
+		height searchbar-height
+		i
+			color main-color
+			margin-right 20px
+			font-size 18px
+		.search-input
+			background #FFF
+			box-shadow 1px 1px 1px 0 rgba(0,0,0,.22) inset
+			border 0
+			width @width
+			height @height
+			font-size 18px
+			padding 20px
+			&:focus
+				background #FFF
+		@media screen and (max-width: break1)
+			width @width * 0.8
+		@media screen and (max-width: break2)
+			width 80%
+	.card
+		background #FFF
+		color main-black
+		box-shadow 1px 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -2px rgba(0,0,0,.16),1px 1px 3px 0 rgba(0,0,0,.12)
+		font-size 17px
+		width card-width
+		margin 20px auto
+		padding 30px
+		box-sizing border-box
+		.card-title
+			font-size 24px
+			font-weight bold
+			margin-bottom 26px
+		.card-action a
+			color main-color
+			font-size 20px
+			font-weight bold
+			width 160px
+			outline 0
+			i
+				transition all 0.1s linear
+			&:hover, &:active, &:focus
+				text-decoration none
+				i
+					margin-left 8px
+		@media screen and (max-width: break1)
+			width @width * 0.8
+		@media screen and (max-width: break2)
+			width 76%
+
+#mask
+	@media screen and (max-width: break2)
+		background blackA(.26)
+		display none
+		position absolute
+		top 0
+		left 0
+		width 100vw
+		height 100vh
+		transition none
+		z-index 200

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Codellege</title>
+    <link rel="stylesheet" href="assets/css/uikit.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div id="mask"></div>
+<div class="container uk-flex">
+    <aside id="sidebar" class="sidebar uk-text-center">
+        <img src="assets/images/codellege.png" class="main-logo" alt="Codellege">
+        <ul class="uk-nav uk-nav-side sidebar-nav">
+            <li class="uk-active"><a href="#">所有類別</a></li>
+            <li><a href="#java">Java</a></li>
+        </ul>
+        <div class="coala-logo-container">
+            <a href="https://coala-web.appspot.com/"><img src="assets/images/coala.png" class="coala-logo" alt="Coala"></a>
+        </div>
+    </aside>
+    <div class="main-body">
+        <nav class="uk-navbar navbar">
+            <div class="normal-nav-container">
+                <ul class="uk-navbar-nav">
+                    <li class="burger"><a href="#sidebar" class="uk-navbar-toggle" data-uk-toggle="{ target:'#sidebar', cls:'showing' }"></a></li>
+                    <li class="uk-active"><a href="#a">課程清單</a></li>
+                    <li><a href="#b">學習歷程</a></li>
+                    <li><a href="#c">關於本站</a></li>
+                    <li><a href="#d">常見問題</a></li>
+                </ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li><a href="#logout">登出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobile-nav-container">
+                <ul class="uk-navbar-nav">
+                    <li class="burger"><a href="#sidebar" class="uk-navbar-toggle" data-uk-toggle="{ target:'#sidebar', cls:'showing' }"></a></li>
+                </ul>
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-parent" data-uk-dropdown>
+                            <a href="#">頁面選單 <i class="uk-icon-caret-down"></i></a>
+                            <div class="nav-dropdown uk-dropdown uk-dropdown-navbar">
+                                <ul class="uk-nav uk-nav-navbar">
+                                    <li class="uk-active"><a href="#a">課程清單</a></li>
+                                    <li><a href="#b">學習歷程</a></li>
+                                    <li><a href="#c">關於本站</a></li>
+                                    <li><a href="#d">常見問題</a></li>
+                                    <li class="uk-nav-divider"></li>
+                                    <li><a href="#logout">登出</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="search-form uk-form">
+                <div class="uk-form-icon uk-form-icon-flip">
+                    <input type="text" class="search-input" placeholder="點擊這裡搜尋...">
+                    <i class="uk-icon-search uk-icon-large"></i>
+                </div>
+            </div>
+            <div class="card uk-panel uk-panel-box">
+                <h3 class="uk-panel-title card-title">Java基礎入門</h3>
+                <div class="card-content">
+                    <p>本課程著重於Java程式語言的基本語法和結構，循序漸進的課程規劃，搭配題庫練習，即使沒有學過Java的初學者也能輕鬆入門。</p>
+                </div>
+                <div class="card-action uk-text-right">
+                    <a href="http://codellege.appspot.com/#!/4/1" class="uk-button uk-button-link uk-text-center">我要上課 <i class="uk-icon-angle-right"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="assets/js/uikit.min.js"></script>
+<script>
+$(function () {
+   $('#mask').click(function (e) {
+       $(this).hide();
+       $('#sidebar').removeClass('showing');
+   });
+   $('.burger').click(function (e) {
+       $('#mask').show();
+   });
+});
+</script>
+</body>
+</html>

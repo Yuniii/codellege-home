@@ -1,0 +1,32 @@
+.sidebar
+	background #FFF
+	box-shadow 0 3px 2px 0 rgba(0,0,0,.24),0 6px 2px -2px rgba(0,0,0,.28),0 2px 6px 0 rgba(0,0,0,.20)
+	width sidebar-width
+	height 100vh
+	display flex
+	flex-direction column
+	position relative
+	z-index 300
+	.sidebar-nav
+		flex 1
+		overflow-y auto
+		li > a
+			color main-black
+			font-size 20px
+			height 60px
+			line-height 60px
+		li.uk-active > a
+			background blackA(0.06)
+			color main-color
+			font-weight bold
+	.coala-logo-container
+		background coala-green
+		padding 20px 60px
+	&.showing
+		left 0
+	@media screen and (max-width: break2)
+		position absolute
+		left (- sidebar-width)
+	@media screen and (max-width: break5)
+		width @width * 0.86
+		left (- sidebar-width * 0.86)

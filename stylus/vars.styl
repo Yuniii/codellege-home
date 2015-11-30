@@ -1,0 +1,55 @@
+$font-family = Roboto, "微軟正黑體"
+global-font = 15px\/1.8 $font-family
+main-color = #b12424
+main-background = #f4f4f4
+main-black = #524e4b
+coala-green = #559a59
+
+break1 = 1367px
+break2 = 1120px
+break3 = 960px
+break4 = 760px
+break5 = 480px
+
+navbar-height = 78px
+
+sidebar-width = 320px
+
+searchbar-width = 860px
+searchbar-height = 52px
+
+card-width = 760px
+
+
+blackA(a)
+	rgba(0, 0, 0, a)
+
+whiteA(a)
+	rgba(255, 255, 255, a)
+
+* 
+	transition all 0.16s ease
+
+html, body
+	min-height 100%
+	height 100%
+
+body
+	font global-font
+	background main-background
+	color main-black
+
+h1, h2, h3, h4, h5, h6, p, a
+	font-family $font-family
+
+::-webkit-input-placeholder 
+	font-style italic
+
+:-moz-placeholder 
+	font-style italic
+
+::-moz-placeholder 
+	font-style italic
+
+:-ms-input-placeholder 
+	font-style italic
